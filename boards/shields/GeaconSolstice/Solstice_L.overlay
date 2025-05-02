@@ -17,27 +17,32 @@
     anin0: analog_input_0 {
         compatible = "zmk,analog-input";
         sampling-hz = <100>;
-        y-ch {
+         x-ch {
             io-channels = <&adc 2>;
-            mv-mid = <1600>;
-            mv-min-max = <3200>;
-            mv-deadzone = <500>;
+            mv-mid = <1630>;
+            mv-min-max = <1600>;
+            mv-deadzone = <10>;
             scale-multiplier = <1>;
-            scale-divisor = <800>;
+            scale-divisor = <70>;
             invert;
             evt-type = <INPUT_EV_REL>;
             input-code = <INPUT_REL_X>;
         };
-        x-ch {
+        y-ch {
             io-channels = <&adc 3>;
-            mv-mid = <1600>;
-            mv-min-max = <3200>;
-            mv-deadzone = <500>;
-            scale-multiplier = <1>;
-            scale-divisor = <800>;
-           // invert;
+            mv-mid = <1630>;
+            mv-min-max = <1600>;
+            mv-deadzone = <10>;
+            scale-multiplier = <3>;
+            scale-divisor = <4>;
+            invert;
             evt-type = <INPUT_EV_REL>;
             input-code = <INPUT_REL_Y>;
+
+            /* enable report mdoe for gamepad axix or knob */
+            /* to only call input_report on quantquantized value is updated */
+            report-on-change-only;
+
         };
     };
     
