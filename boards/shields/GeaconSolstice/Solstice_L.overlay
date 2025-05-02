@@ -20,7 +20,7 @@
         y-ch {
             io-channels = <&adc 2>;
             mv-mid = <1600>;
-            mv-min-max = <1600>;
+            mv-min-max = <3200>;
             mv-deadzone = <500>;
             scale-multiplier = <1>;
             scale-divisor = <800>;
@@ -31,7 +31,7 @@
         x-ch {
             io-channels = <&adc 3>;
             mv-mid = <1600>;
-            mv-min-max = <1600>;
+            mv-min-max = <3200>;
             mv-deadzone = <500>;
             scale-multiplier = <1>;
             scale-divisor = <800>;
