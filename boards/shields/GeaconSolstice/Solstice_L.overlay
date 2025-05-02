@@ -45,7 +45,7 @@
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&anin0>;
-        input-processors = <&zip_xy_to_scroll_mapper>;
+      //  input-processors = <&zip_xy_to_scroll_mapper>;
     };
 
     split_inputs {
